@@ -1,0 +1,259 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+html{
+    scroll-behavior: smooth;
+}
+#nav {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+#nav ul {
+    display: flex;
+    list-style: none;
+    align-items: center;
+
+}
+#nav::before {
+    content: "";
+    background-color: black;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: 1.5;
+}
+
+#nav ul li a {
+    font-weight: bold;
+    color: whitesmoke;
+    text-decoration: none;
+    padding: 5px 20px;
+    border-radius: 20px;
+}
+
+#nav ul li a:hover {
+    color: orange;
+    font-weight: bold;
+}
+
+.logo img {
+    height: 80px;
+    margin: 7px 30px;
+}
+
+.home {
+    height: 530px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.home h1 {
+    display: flex;
+    color: black;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.8rem;
+}
+
+.home p {
+    padding: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+#but {
+    padding: 8px 29px;
+    margin-left: 13px;
+    display: inline;
+    margin-top: 8px;
+    background-color: transparent;
+    font-weight: bold;
+    border-color: black;
+    color: black;
+    cursor: pointer;
+}
+
+.home::before {
+    content: "";
+    position: absolute;
+    background: url("../images/main-background.png") no-repeat center center/cover;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    top: 0px;
+    opacity: 0.8;
+}
+
+#services {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 5px;
+}
+
+#services .box {
+    padding: 5px;
+}
+
+#services .box img {
+    width: auto;
+    max-height: 400px;
+    overflow: hidden;
+    display: block;
+    margin: auto;
+}
+
+.ser {
+    padding: 52px;
+    margin-top: 205px;
+    justify-content: center;
+    text-align: center;
+}
+
+.box p {
+    margin: 10px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.box {
+    display: block;
+    margin: auto;
+    float: left;
+    background-color: rgb(234, 228, 228);
+    padding: 4px;
+    margin: 30px;
+}
+
+.hi {
+    text-align: center;
+    margin: 15px;
+    font-size: 1.7rem;
+}
+
+#contact h1 {
+    padding: 30px;
+    font-size: 2.5rem;
+}
+
+#contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#contact::before {
+    content: "";
+    background-color: rgb(225, 223, 220);
+    position: absolute;
+    height: 38%;
+    width: 100%;
+    z-index: -1;
+}
+
+.con {
+    padding: 4px;
+    margin: 5px;
+}
+
+#name {
+    padding: 2px;
+    text-align: center;
+    width: 400px;
+    height: 27px;
+}
+
+#mail {
+    padding: 2px;
+    text-align: center;
+    width: 400px;
+    height: 27px;
+}
+
+#num {
+    padding: 2px;
+    text-align: center;
+    width: 400px;
+    height: 27px;
+}
+
+.but {
+    color: grey;
+    border-color: rgb(224, 216, 206);
+    background-color: white;
+    padding: 2px;
+    text-align: center;
+    width: 140px;
+    height: 27px;
+}
+
+.but:hover {
+    color: rgb(46, 46, 46);
+}
+
+.foot {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+}
+
+
+@media only screen and (max-width: 1130px) {
+    #nav {
+        flex-direction: column;
+    }
+    #nav ul li a{
+        font-size: 1rem;
+        padding: 0px 7px;
+    }
+
+    #services {
+        flex-direction: column;
+    }
+
+    #contact {
+        overflow: hidden;
+    }
+
+    #service .box img{
+        overflow: hidden;
+        width:100%;
+
+        height: fit-content;
+    }
+    .ser{
+        margin: 0px;
+        padding:0px;
+    }
+    #contact h1{
+        padding:10px;
+    }
+    .home{
+        display: flex;
+        justify-content: center;
+    }
+    .home::before{
+        height: 600px;
+    }
+    .con::before{
+        height: 200px;
+        overflow: hidden;
+    }
+    .con{
+        margin: 2px;
+        padding:2px;
+    }
+    #services .box {
+        padding: 0px;
+        width: auto;
+    }
+}
